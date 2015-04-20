@@ -21,12 +21,12 @@ class puppetdb2_rundeck::install {
   }
 
   staging::file { 'puppetdb2-rundeck.tar.gz':
-    source => "https://github.com/sirloper/puppetdb2-rundeck/archive/${::puppetdb2_rundeck::version.tar.gz",
+    source => "https://github.com/sirloper/puppetdb2-rundeck/archive/${::puppetdb2_rundeck::version}.tar.gz",
   }
 
   staging::extract { 'puppetdb2-rundeck.tar.gz':
     target  => $::puppetdb2_rundeck::apache_docroot,
-    creates => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2_rundeck-${::puppetdb2_rundeck::version",
+    creates => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2_rundeck-${::puppetdb2_rundeck::version}",
     require => Staging::File['puppetdb2-rundeck.tar.gz'],
   }
 

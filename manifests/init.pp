@@ -13,7 +13,7 @@ class puppetdb2_rundeck (
   $apache_group           = $::puppetdb2_rundeck::params::apache_group,           # group account for the apache_user
   $package_source         = $::puppetdb2_rundeck::params::package_source,         # source url for the puppetdb2_rundeck archive
   $manage_apache          = true,                                       # boolean flag for enabling this module to manage apache
-  $manage_apache_vhost    = true,                                       # boolean flag for enabling this module to manage the virtual host
+  $manage_vhost           = true,                                       # boolean flag for enabling this module to manage the virtual host
   $apache_server_root     = $::puppetdb2_rundeck::params::apache_server_root,     # the root directory for the httpd configuration files
   $apache_serveradmin     = $::puppetdb2_rundeck::params::apache_serveradmin,     # serveradmin value as set in the vhost configuration
   $site_fqdn              = $::fqdn,                                    # fully qualified domain name for the web site
