@@ -4,6 +4,12 @@
 #
 class puppetdb2_rundeck::install {
 
+  assert_private()
+
+  if $::puppetdb2_rundeck::manage_apache {
+    include '::puppetdb2_rundeck::install::apache'
+  }
+
   package { 'rubygem-sinatra':
     ensure  => present,
   }
