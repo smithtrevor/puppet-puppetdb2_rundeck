@@ -22,7 +22,6 @@ class puppetdb2_rundeck (
   # validate parameters here
 
   class { '::puppetdb2_rundeck::install': } ->
-  class { '::puppetdb2_rundeck::config': } ~>
-  class { '::puppetdb2_rundeck::service': } ->
+  class { '::puppetdb2_rundeck::config': } ->
   Class['::puppetdb2_rundeck']
 }
