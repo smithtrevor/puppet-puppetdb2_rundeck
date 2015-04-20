@@ -8,8 +8,14 @@
 #   Explanation of what this parameter affects and what it defaults to.
 #
 class puppetdb2_rundeck (
-  $package_name = $::puppetdb2_rundeck::params::package_name,
-  $service_name = $::puppetdb2_rundeck::params::service_name,
+  $apache_docroot         = $::phpipam::params::apache_docroot,         # document root for apache this is the parent directory to the phpipam docroot
+  $apache_user            = $::phpipam::params::apache_user,            # user account under which the httpd processes run
+  $apache_group           = $::phpipam::params::apache_group,           # group account for the apache_user
+  $package_source         = $::phpipam::params::package_source,         # source url for the phpipam archive
+  $manage_apache          = true,                                       # boolean flag for enabling this module to manage apache
+  $apache_server_root     = $::phpipam::params::apache_server_root,     # the root directory for the httpd configuration files
+  $apache_serveradmin     = $::phpipam::params::apache_serveradmin,     # serveradmin value as set in the vhost configuration
+  $site_fqdn              = $::fqdn,                                    # fully qualified domain name for the web site
 ) inherits ::puppetdb2_rundeck::params {
 
   # validate parameters here
