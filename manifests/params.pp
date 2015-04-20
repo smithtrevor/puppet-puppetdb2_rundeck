@@ -8,23 +8,6 @@ class puppetdb2_rundeck::params {
 
   $apache_serveradmin = "root@${::fqdn}"
 
-  $ssl_params_hash = {
-    'ssl_cert'             => getvar(::apache::default_ssl_cert),
-    'ssl_key'              => getvar(::apache::default_ssl_key),
-    'ssl_chain'            => getvar(::apache::default_ssl_chain),
-    'ssl_ca'               => getvar(::apache::default_ssl_ca),
-    'ssl_crl_path'         => getvar(::apache::default_ssl_crl_path),
-    'ssl_crl'              => getvar(::apache::default_ssl_crl),
-    'ssl_certs_dir'        => getvar(::apache::params::ssl_certs_dir),
-    'ssl_protocol'         => undef,
-    'ssl_cipher'           => undef,
-    'ssl_honorcipherorder' => undef,
-    'ssl_verify_client'    => undef,
-    'ssl_verify_depth'     => undef,
-    'ssl_options'          => undef,
-    'ssl_proxyengine'      => undef,
-  }
-
   case $::osfamily {
     'RedHat', 'Amazon': {
       $apache_docroot = '/var/www/html'
