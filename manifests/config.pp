@@ -20,7 +20,7 @@ class puppetdb2_rundeck::config {
         {
           path           => '/',
           allow_override => 'None',
-          options        => 'Indexes -Multiviews',
+          options        => 'None',
           order          => 'allow,deny',
           allow          => 'from all',
         },
