@@ -13,6 +13,7 @@ class puppetdb2_rundeck (
   $apache_group           = $::phpipam::params::apache_group,           # group account for the apache_user
   $package_source         = $::phpipam::params::package_source,         # source url for the phpipam archive
   $manage_apache          = true,                                       # boolean flag for enabling this module to manage apache
+  $manage_apache_vhost    = true,                                       # boolean flag for enabling this module to manage the virtual host
   $apache_server_root     = $::phpipam::params::apache_server_root,     # the root directory for the httpd configuration files
   $apache_serveradmin     = $::phpipam::params::apache_serveradmin,     # serveradmin value as set in the vhost configuration
   $site_fqdn              = $::fqdn,                                    # fully qualified domain name for the web site
