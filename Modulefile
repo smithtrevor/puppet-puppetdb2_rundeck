@@ -1,0 +1,10 @@
+name          'puppet-puppetdb2_rundeck'
+version       '0.1.0'
+source        'https://github.com/smithtrevor/puppet-puppetdb2_rundeck.git'
+author        'smithtrevor'
+license       'Apache 2.0'
+summary       'installs and configures the puppetdb2-rundeck plugin'
+description   ''
+project_page  'https://github.com/smithtrevor/puppet-puppetdb2_rundeck'
+
+dependency 'puppetlabs/stdlib'

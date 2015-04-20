@@ -1,0 +1,33 @@
+{
+  "name": "puppet-puppetdb2_rundeck",
+  "version": "0.1.0",
+  "author": "smithtrevor",
+  "summary": "installs and configures the puppetdb2-rundeck plugin",
+  "license": "Apache 2.0",
+  "source": "https://github.com/smithtrevor/puppet-puppetdb2_rundeck.git",
+  "project_page": "https://github.com/smithtrevor/puppet-puppetdb2_rundeck",
+  "issues_url": "https://github.com/smithtrevor/puppet-puppetdb2_rundeck/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ]
+}
