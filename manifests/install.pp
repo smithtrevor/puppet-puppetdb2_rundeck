@@ -26,11 +26,11 @@ class puppetdb2_rundeck::install {
 
   staging::extract { 'puppetdb2-rundeck.tar.gz':
     target  => $::puppetdb2_rundeck::apache_docroot,
-    creates => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2_rundeck-${::puppetdb2_rundeck::version}",
+    creates => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2-rundeck-${::puppetdb2_rundeck::version}",
     require => Staging::File['puppetdb2-rundeck.tar.gz'],
   }
 
-  file { "${::puppetdb2_rundeck::apache_docroot}/puppetdb2_rundeck":
+  file { "${::puppetdb2_rundeck::apache_docroot}/puppetdb2-rundeck":
     owner     => 'root',
     group     => $::puppetdb2_rundeck::apache_group,
     mode      => '0640',
