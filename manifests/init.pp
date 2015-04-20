@@ -17,6 +17,7 @@ class puppetdb2_rundeck (
   $apache_server_root     = $::puppetdb2_rundeck::params::apache_server_root,     # the root directory for the httpd configuration files
   $apache_serveradmin     = $::puppetdb2_rundeck::params::apache_serveradmin,     # serveradmin value as set in the vhost configuration
   $site_fqdn              = $::fqdn,                                    # fully qualified domain name for the web site
+  $version                = '1.0.2',                                              # version of the plugin to install from github
 ) inherits ::puppetdb2_rundeck::params {
 
   # validate parameters here
