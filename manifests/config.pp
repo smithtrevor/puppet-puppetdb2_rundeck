@@ -10,7 +10,7 @@ class puppetdb2_rundeck::config {
     
     apache::vhost { 'puppetdb2_rundeck':
       ip                => '*',
-      port              => '80',
+      port              => '8888',
       servername        => $::puppetdb2_rundeck::site_fqdn,
       ssl               => false,
       ip_based          => false,
