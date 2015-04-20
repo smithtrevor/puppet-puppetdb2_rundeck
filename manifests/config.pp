@@ -18,18 +18,14 @@ class puppetdb2_rundeck::config {
       docroot           => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2_rundeck",
       directories       => [
         {
-          path           => '/',
+          path           => $::puppetdb2_rundeck::apache_docroot,
           allow_override => 'None',
           options        => 'None',
-          order          => 'allow,deny',
-          allow          => 'from all',
         },
         {
-          path           => '/public',
+          path           => "${::puppetdb2_rundeck::apache_docroot}/public",
           allow_override => 'None',
           options        => 'None',
-          order          => 'allow,deny',
-          allow          => 'from all',
         }
       ],
     }
