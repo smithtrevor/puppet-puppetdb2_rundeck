@@ -15,7 +15,7 @@ class puppetdb2_rundeck::config {
       ssl               => false,
       ip_based          => false,
       access_log_format => 'combined',
-      docroot           => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2-rundeck-${::puppetdb2_rundeck::version}",
+      docroot           => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2-rundeck-${::puppetdb2_rundeck::version}/public",
       directories       => [
         {
           path           => "$::puppetdb2_rundeck::apache_docroot/puppetdb2-rundeck-${::puppetdb2_rundeck::version}",
