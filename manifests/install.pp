@@ -38,13 +38,4 @@ class puppetdb2_rundeck::install {
     subscribe => Staging::Extract[ 'puppetdb2-rundeck.tar.gz'],
   }
 
-  file { $::puppetdb2_rundeck::apache_docroot:
-    ensure  => directory,
-    owner   => 'root',
-    group   => $::puppetdb2_rundeck::apache_group,
-    mode    => '0755',
-    require => Group[$::puppetdb2_rundeck::apache_group],
-  }
-
-
 }

@@ -16,4 +16,13 @@ class puppetdb2_rundeck::install::apache {
   }
 
   class { '::apache::mod::prefork': }
+
+  file { $::puppetdb2_rundeck::apache_docroot:
+    ensure  => directory,
+    owner   => 'root',
+    group   => $::puppetdb2_rundeck::apache_group,
+    mode    => '0755',
+    require => Group[$::puppetdb2_rundeck::apache_group],
+  }
+
 }
