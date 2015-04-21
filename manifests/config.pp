@@ -15,15 +15,15 @@ class puppetdb2_rundeck::config {
       ssl               => false,
       ip_based          => false,
       access_log_format => 'combined',
-      docroot           => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2_rundeck-${::puppetdb2_rundeck::version}",
+      docroot           => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2-rundeck-${::puppetdb2_rundeck::version}",
       directories       => [
         {
-          path           => "$::puppetdb2_rundeck::apache_docroot/puppetdb2_rundeck-${::puppetdb2_rundeck::version}",
+          path           => "$::puppetdb2_rundeck::apache_docroot/puppetdb2-rundeck-${::puppetdb2_rundeck::version}",
           allow_override => 'None',
           options        => 'None',
         },
         {
-          path           => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2_rundeck-${::puppetdb2_rundeck::version}/public",
+          path           => "${::puppetdb2_rundeck::apache_docroot}/puppetdb2-rundeck-${::puppetdb2_rundeck::version}/public",
           allow_override => 'None',
           options        => 'None',
         }
