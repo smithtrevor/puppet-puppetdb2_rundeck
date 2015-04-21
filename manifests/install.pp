@@ -42,7 +42,7 @@ class puppetdb2_rundeck::install {
     ensure  => directory,
     owner   => 'root',
     group   => $::puppetdb2_rundeck::apache_group,
-    mode    => '0750',
+    mode    => '0755',
     require => Group[$::puppetdb2_rundeck::apache_group],
   }
 
